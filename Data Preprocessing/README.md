@@ -6,7 +6,7 @@ This directory contains the data cleaning scripts, preprocessing pipelines, and 
 
 ## 📊 Label Distribution Overview
 
-Below are the distribution bar charts for all target labels in the dataset.
+Porfessors and graduate students from two Chinese medicine universities provided raw image data and defined 118 fine-grained labels for face and tongue diagnosis. Images and associated annotations can not be shared due to their proprietary nature. Face daignosis labels cover mouth, lip, eyes, nose and skin tones. Tongue diagnosis labels focus on tongue coating and tongue body. Below are the distribution bar charts for all target labels in the dataset. 
 
 <details open>
 <summary><b>Click to expand/collapse Label Distribution Charts (1 – 13)</b></summary>
@@ -109,5 +109,5 @@ Below are the distribution bar charts for all target labels in the dataset.
 
 ## 📈 Key Insights & Imbalance Strategy
 
-* **Class Imbalance:** Highlight any heavily skewed labels here (e.g., Label 03 has an 80/20 skew).
-* **Mitigation:** Mention techniques used (e.g., SMOTE, re-weighting loss functions, under-sampling).
+* **Class Imbalance:** The label distribution is severly biased, exhibiting a clear long-tail characteristic. Due to limited data availability, not all labels have sufficient data samples. 
+* **Mitigation:** Experiment with different SOTA backbones and apply advanced data augmentation e.g., mixup, randaug and cutmix.
