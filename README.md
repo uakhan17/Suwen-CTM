@@ -80,7 +80,7 @@ Suwen-CTM/
 
 | Module Directory | Key Technologies | Description |
 | :--- | :--- | :--- |
-| [**`Data_Preprocessing/`**](./Data_Preprocessing/) | Pandas, Matplotlib, Seaborn | Analyzes 20 target feature distribution bar charts and handles dataset cleaning. |
+| [**`Data_Preprocessing/`**](./Data_Preprocessing/) | Pandas, Matplotlib, Seaborn | Analyzes 19 target feature distribution bar charts and handles dataset cleaning. |
 | [**`Sanity_Checks/`**](./Sanity_Checks/) | OpenCV, SCRFD, MediaPipe, CIELAB | Pre-inference guardrails that filter out invalid photos, extreme roll angles, or closed mouths. |
 | [**`Vision_Diagnosis/`**](./Vision_Diagnosis/) | PyTorch, ConvNeXt v2, timm | Multi-task vision models trained with RandAugment, CutMix, MixUp, and 5-Fold Cross-Validation. |
 | [**`Prescription_System/`**](./Prescription_System/) | Rank-BM25, BGE-Small, Gradio | Hybrid CTM prescription retrieval engine with automated **Eighteen Incompatibilities (十八反)** safety interception. |
