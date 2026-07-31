@@ -34,11 +34,11 @@ This repository is structured as a full-stack AI ecosystem. Click into any subfo
 
 ```text
 Suwen-CTM/
-├── Data_Preprocessing/          # EDA scripts, label distribution charts, imbalance mitigation
-├── Sanity_Checks/               # Pre-inference quality audit gates (audit_face & audit_tongue)
-├── Vision_Diagnosis/            # Multi-task ConvNeXt v2 training, 5-Fold CV, weights export
-├── Prescription_System/         # Hybrid BM25 + BGE retrieval, safety guard, Gradio demo
-└── Cloud_Deployment/            # FastAPI router, Docker containerization, cloud deployment configs
+├── Data Preprocessing/          # EDA scripts, label distribution charts, imbalance mitigation
+├── Sanity Check Models/               # Pre-inference quality audit gates (audit_face & audit_tongue)
+├── Face & Tongue Diagnosis Models/            # Multi-task ConvNeXt v2 training, 5-Fold CV, weights export
+├── Prescription Recommendation System/         # Hybrid BM25 + BGE retrieval, safety guard, Gradio demo
+└── Cloud Deployment/            # FastAPI router, Docker containerization, cloud deployment configs
 ```
 
 ---
