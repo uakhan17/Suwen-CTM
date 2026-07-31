@@ -3,7 +3,7 @@
 """
 build_formula_index_v1.py
 - 从 v4_1 方剂 JSONL 构建中文句向量索引（以便快速候选召回）
-- 默认模型：BAAI/bge-small-zh-v1.5（可改为你部署的中文向量模型）
+- 默认模型：BAAI/bge-small-zh-v1.5
 用法：
 python build_formula_index_v1.py \
   --formulas /path/方剂v4_1_完整.jsonl \
