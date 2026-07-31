@@ -6,7 +6,7 @@
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ed.svg)](https://www.docker.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-**Suwen-CTM** is a full-stack, clinical-grade AI system designed for automated **Chinese Traditional Medicine (CTM)** inspection and prescription recommendation. By combining multitask vision architectures (ConvNeXt v2), custom computer-vision quality audit gates, and hybrid NLP retrieval engines (BM25 + BGE Embeddings), Suwen-CTM translates visual face and tongue features into actionable, safe diagnostic insights.
+**Suwen-CTM** is a full-stack, clinical-grade AI system designed for automated **Chinese Traditional Medicine (CTM)** diagnosis and prescription recommendation. By combining multitask vision architectures (ConvNeXt v2), custom computer-vision quality audit gates, and hybrid NLP retrieval engines (BM25 + BGE Embeddings), Suwen-CTM translates visual face and tongue features and summary of chief complaint into actionable, diagnostic insights.
 
 ---
 
@@ -60,15 +60,17 @@ Suwen-CTM/
                           [FAILED] │                   │ [PASSED]
                                    ▼                   ▼
            ┌──────────────────────────────┐   ┌──────────────────────────────┐
-           │ ❌ Early Rejection Warning   │   │ 2. Multitask Neural Network  │
-           │  "采集信息有误，请重拍照片"   │   │    (ConvNeXt v2 Model Pack) │
+            ❌ Early Rejection Warning         2. Multitask Neural Network  
+                                                   
            └──────────────────────────────┘   └──────────────┬───────────────┘
                                                              │ 118 Diagnostic Labels
+                                                             | +
+                                                             | Summary of Chief Complaint
                                                              ▼
            ┌──────────────────────────────┐   ┌──────────────────────────────┐
-           │ 4. Interactive Gradio Demo   │   │ 3. Hybrid Prescription Engine│
-           │    & Production FastAPI      │◀──│    - BM25 + BGE Dense Retrieval│
-           │    (/predict Endpoint)       │   │    - 18 Fan / 19 Wei Safety Guard│
+           │ 4. Interactive Gradio Demo   │   │ 3. Hybrid Prescription Engine
+           │    & Production FastAPI      │◀──  - BM25 + BGE Dense Retrieval
+           │    (/predict Endpoint)       │   │ - 18 Fan / 19 Wei Safety Guard
            └──────────────────────────────┘   └──────────────────────────────┘
 ```
 
@@ -85,33 +87,3 @@ Suwen-CTM/
 | [**`Cloud_Deployment/`**](./Cloud_Deployment/) | FastAPI, Uvicorn, Docker, ONNX | Containerized deployment backend with Gumbel-Max sampling and healthcheck monitoring. |
 
 ---
-
-## 🚀 Quick Start
-
-### 1. Clone & Environment Setup
-```bash
-git clone [https://github.com/uakhan17/Suwen-CTM.git](https://github.com/uakhan17/Suwen-CTM.git)
-cd Suwen-CTM
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: .\venv\Scripts\activate
-
-# Install core dependencies
-pip install -r requirements.txt
-```
-
-### 2. Run Locally via Docker
-To launch the full FastAPI inference container with CUDA support:
-
-```bash
-docker build -t suwen-ctm:latest .
-docker run -d -p 8000:8000 --gpus all --name suwen_service suwen-ctm:latest
-```
-
-Verify service status at `http://localhost:8000/healthz`.
-
-### 3. Launch Prescription Recommendation GUI Demo
-```bash
-python Prescription_System/app_demo.py
-```
