@@ -6,7 +6,7 @@
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ed.svg)](https://www.docker.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-**Suwen-CTM** is a full-stack, production-deployed AI system designed for automated **Chinese Traditional Medicine (CTM)** diagnosis and prescription recommendation. By combining multitask vision architectures (ConvNeXt v2), custom computer-vision quality audit gates, and hybrid NLP retrieval engines (BM25 + BGE Embeddings), Suwen-CTM translates visual face and tongue features and summary of chief complaint into actionable, diagnostic insights.
+**Suwen-CTM** is a end-to-end, production-deployed AI system designed for automated **Chinese Traditional Medicine (CTM)** diagnosis and prescription recommendation. By combining multitask vision architectures (ConvNeXt v2), custom computer-vision quality audit gates, and hybrid NLP retrieval engines (BM25 + BGE Embeddings), Suwen-CTM translates visual face and tongue features and summary of chief complaint into actionable, diagnostic insights.
 
 ---
 
@@ -19,7 +19,7 @@ Developing AI for CTM domain application presents unique real-world technical hu
 > * **Our Solution:** Implemented **ConvNeXt v2** backbone transfer learning paired with an aggressive data augmentation triad (**RandAugment + MixUp + CutMix**) and **5-Fold Cross-Validation with Exponential Moving Average (EMA)** smoothing to prevent overfitting while maximizing representation feature retention.
 
 > ### 📊 Challenge 2: 118 Fine-Grained & Highly Imbalanced Diagnostic Labels
-> * **The Problem:** The taxonomy contains **118 fine-grained target labels** across 19 sub-tasks (e.g., specific tongue coat textures, facial luster, lip color variations), leading to a severe long-tail class distribution.
+> * **The Problem:** The taxonomy contains **118 fine-grained labels** across 19 sub-tasks (e.g., specific tongue coat textures, facial luster, lip color variations), leading to a severe long-tail class distribution.
 > * **The Clinical Upside:** Unlike generic vision labels, these 118 attributes are rigorously defined, mutually consistent, and directly map to CTM diagnostic logic. Uncertainty-aware **Gumbel-Max exploration sampling** is deployed during inference to stabilize decision boundaries for rare tail classes.
 
 > ### 🛡️ Challenge 3: In-the-Wild Real-World Photo Noise
