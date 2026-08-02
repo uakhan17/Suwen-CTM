@@ -63,7 +63,7 @@ Suwen-CTM/
             ❌ Early Rejection Warning         2. Multitask Neural Network  
                                                    
            └──────────────────────────────┘   └──────────────┬───────────────┘
-                                                             │ 118 Diagnostic Labels
+                                                             │ 19 Diagnostic Labels
                                                              | +
                                                              | Summary of Chief Complaint
                                                              ▼
